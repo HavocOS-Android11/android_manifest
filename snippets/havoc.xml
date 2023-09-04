@@ -8,6 +8,10 @@
            fetch="https://github.com/Havoc-OS"
            revision="eleven" />
 
+  <remote  name="havoc-a11"
+           fetch="https://github.com/HavocOS-Android11"
+           revision="eleven" />
+
   <remote  name="havoc-devices"
            fetch="https://github.com/Havoc-Devices"
            revision="eleven" />
@@ -26,7 +30,7 @@
 
   <!-- Build -->
   <project path="build/blueprint" name="android_build_blueprint" remote="havoc" />
-  <project path="build/make" name="android_build" remote="havoc">
+  <project path="build/make" name="android_build" remote="havoc-a11">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -48,10 +52,13 @@
   <project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" remote="havoc" />
 
   <!-- External -->
-  <project path="external/aac" name="android_external_aac" remote="havoc" />
+  <project path="external/aac" name="android_external_aac" remote="havoc-a11" />
   <project path="external/boringssl" name="android_external_boringssl" remote="havoc" />
   <project path="external/cldr" name="android_external_cldr" remote="havoc" />
+  <project path="external/dtc" name="android_external_dtc" remote="havoc-a11" />
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="havoc" />
+  <project path="external/expat" name="android_external_expat" remote="havoc-a11" />
+  <project path="external/freetype" name="android_external_freetype" remote="havoc-a11" />
   <project path="external/gptfdisk" name="android_external_gptfdisk" remote="havoc" />
   <project path="external/guice" name="android_external_guice" remote="havoc" />
   <project path="external/icu" name="android_external_icu" remote="havoc" />
@@ -67,14 +74,17 @@
   <project path="external/tinycompress" name="android_external_tinycompress" remote="havoc" />
   <project path="external/toybox" name="android_external_toybox" remote="havoc" />
   <project path="external/tremolo" name="android_external_tremolo" remote="havoc" />
+  <project path="external/zlib" name="android_external_zlib" remote="havoc-a11" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="android_frameworks_av" remote="havoc" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="havoc" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="havoc-a11" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="havoc-a11" />
   <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="havoc" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="havoc" />
+  <project path="frameworks/minikin" name="android_frameworks_minikin" remote="havoc-a11" />
+  <project path="frameworks/ml" name="android_frameworks_ml" remote="havoc-a11" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="havoc-a11" />
   <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="havoc" />
-  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="havoc" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="havoc-a11" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="havoc" />
   <project path="frameworks/opt/timezonepicker" name="android_frameworks_opt_timezonepicker" remote="havoc" />
 
@@ -84,7 +94,7 @@
   <project path="hardware/havoc/interfaces" name="android_hardware_havoc_interfaces" remote="havoc" />
   <project path="hardware/interfaces" name="android_hardware_interfaces" remote="havoc" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="havoc" />
-  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="havoc" />
+  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="havoc-a11" />
   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="havoc" />
   <project path="hardware/qcom/data/ipacfg-mgr" name="android_hardware_qcom_data_ipacfg-mgr" remote="havoc" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="havoc" />
@@ -98,7 +108,7 @@
   <project path="hardware/ril" name="android_hardware_ril" remote="havoc" />
 
   <!-- Packages -->
-  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="havoc" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="havoc-a11" />
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="havoc" />
   <project path="packages/apps/CarrierConfig" name="android_packages_apps_CarrierConfig" remote="havoc" />
   <project path="packages/apps/ConfigCenter" name="android_packages_apps_ConfigCenter" remote="havoc" />
@@ -112,10 +122,11 @@
   <project path="packages/apps/ManagedProvisioning" name="android_packages_apps_ManagedProvisioning" remote="havoc" />
   <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="havoc" />
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="havoc" />
-  <project path="packages/apps/PermissionController" name="android_packages_apps_PackageInstaller" remote="havoc" />
+  <project path="packages/apps/PermissionController" name="android_packages_apps_PackageInstaller" remote="havoc-a11" />
   <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" remote="havoc" />
+  <project path="packages/apps/QuickAccessWallet" name="android_packages_apps_QuickAccessWallet" remote="havoc-a11" />
   <project path="packages/apps/SecureElement" name="android_packages_apps_SecureElement" remote="havoc" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="havoc" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="havoc-a11" />
   <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="havoc" />
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="havoc" />
   <project path="packages/apps/SoftAPManager" name="android_packages_apps_SoftAPManager" remote="havoc" />
@@ -127,16 +138,16 @@
   <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="havoc" />
   <project path="packages/modules/CaptivePortalLogin" name="android_packages_modules_CaptivePortalLogin" remote="havoc" />
   <project path="packages/modules/DnsResolver" name="android_packages_modules_DnsResolver" remote="havoc" />
-  <project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" remote="havoc" />
+  <project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" remote="havoc-a11" />
   <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="havoc" />
-  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="havoc" />
-  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="havoc" />
-  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="havoc" />
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="havoc" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="havoc-a11" />
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="havoc-a11" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="havoc-a11" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="havoc-a11" />
 
   <!-- Prebuilts -->
-  <project path="prebuilts/abi-dumps/vndk" name="android_prebuilts_abi-dumps_vndk" remote="havoc" clone-depth="1" />
-  <project path="prebuilts/build-tools" name="android_prebuilts_build-tools" remote="havoc" clone-depth="1" />
+  <project path="prebuilts/abi-dumps/vndk" name="android_prebuilts_abi-dumps_vndk" remote="havoc-a11" clone-depth="1" />
+  <project path="prebuilts/build-tools" name="android_prebuilts_build-tools" remote="havoc-a11" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" remote="havoc" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" remote="havoc" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" remote="havoc" clone-depth="1" />
@@ -147,7 +158,8 @@
   <project path="prebuilts/tools-extras" name="android_prebuilts_tools-extras" remote="havoc" />
 
   <!-- System -->
-  <project path="system/bt" name="android_system_bt" remote="havoc" />
+  <project path="system/bt" name="android_system_bt" remote="havoc-a11" />
+  <project path="system/ca-certificates" name="android_system_ca-certificates" remote="havoc-a11" />
   <project path="system/core" name="android_system_core" remote="havoc" />
   <project path="system/extras" name="android_system_extras" remote="havoc" />
   <project path="system/hardware/interfaces" name="android_system_hardware_interfaces" remote="havoc" />
@@ -155,7 +167,7 @@
   <project path="system/libufdt" name="android_system_libufdt" remote="havoc" />
   <project path="system/media" name="android_system_media" remote="havoc" />
   <project path="system/netd" name="android_system_netd" remote="havoc" />
-  <project path="system/nfc" name="android_system_nfc" remote="havoc" />
+  <project path="system/nfc" name="android_system_nfc" remote="havoc-a11" />
   <project path="system/security" name="android_system_security" remote="havoc" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="havoc" />
   <project path="system/timezone" name="android_system_timezone" remote="havoc" />
@@ -165,6 +177,7 @@
   <project path="system/vold" name="android_system_vold" remote="havoc" />
 
   <!-- Tools -->
+  <project path="tools/apksig" name="android_tools_apksig" remote="havoc-a11" />
   <project path="tools/metalava" name="android_tools_metalava" remote="havoc" />
 
   <!-- Vendor -->
