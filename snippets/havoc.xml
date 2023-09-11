@@ -62,6 +62,7 @@
   <project path="external/dtc" name="android_external_dtc" remote="havoc-a11" />
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="havoc" />
   <project path="external/expat" name="android_external_expat" remote="havoc-a11" />
+  <project path="external/faceunlock" name="android_external_faceunlock" remote="havoc-a11-gitlab" />
   <project path="external/freetype" name="android_external_freetype" remote="havoc-a11" />
   <project path="external/gptfdisk" name="android_external_gptfdisk" remote="havoc" />
   <project path="external/guice" name="android_external_guice" remote="havoc" />
@@ -121,6 +122,7 @@
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="havoc" />
   <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="havoc-a11" />
   <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="havoc" />
+  <project path="packages/apps/FaceUnlockService" name="android_packages_apps_FaceUnlockService" remote="havoc-a11-gitlab" />
   <project path="packages/apps/GamingMode" name="android_packages_apps_GamingMode" remote="havoc" />
   <project path="packages/apps/KeyChain" name="android_packages_apps_KeyChain" remote="havoc" />
   <project path="packages/apps/ManagedProvisioning" name="android_packages_apps_ManagedProvisioning" remote="havoc" />
